@@ -1,0 +1,50 @@
+---
+title: "History of R"
+author: "Maulid Hussein Bwabo"
+date: "`r Sys.Date()`"
+output:
+  word_document: default
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction to R programming for data analytics
+
+## Executive summary 
+This is the five days programme that designed for the graduates student at the Open University of Tanzania (OUT). It is the introduction course for R programming, the none-user and even the amattures or R newbies who wishes to build the career in data analytics as well as data science can fit well into this program. The whole program cover the basics of R programming, then cover some of the advance analysis in R, the reason to fleshing out the details regarding the advance data analytics is to explicates how R is powerfull in modeling and simmulation. I am writting this programming course at the time when finding the way to wrap up my grads program *Ph.D in Management Science and Engineering*. I am persue my degree in China, Jiangsu University. 
+
+### Historical background of R
+
+#### What is R?
+
+The best way to explain the meaning of R is through S language. 
+1.2 The backdrop of the S language 
+The S language has been developed by the John Chambers, and it was initiated at the beginning of 1976 as the statistical environment for the statisticians. By then the programming did not have even the statistical modelling function.
+
+In 1988 the S language was re-loaded into C, this was a version 3 about the language. Thereafter, John Chambers and Hasties sunset the book of Statistical Analysis.
+
+At the early of 1990's the trajectory of the S language went down instead of growing up.A a results Insightful Corp have decided to purchase it. It was happened in 2004, the insightful sold it under the product name called the S-Plus and consolidate some of the fancy features such as the Graphical User Interface (GUI). It turned out in this way due to fast changes in technology.
+
+#### The S Philosophy
+
+The entire S language was important because it propel to invent the R program, the set out of the R programming was built from the S language. Following this, it is fair to argue that the roots for data analysis had emerged from the S language. To be more precisely, the S language has the traditional programming language. 
+
+During the Evolution of the S language, Chambers argue
+("We wanted users to be able to begin in an interactive environment, where they did not consciously think of themselves as programming. Then as their needs became clearer and their sophistication increased, they should be able to slide gradually into programming, when the language and system aspects would become more important").
+
+What was a key message from Chambers? The rationale was to establish the language that was easy for users as well as technically designed parallel with technology.
+
+#### where is R come from?
+
+Immediately after S language starts to take shape R language came into the map. By then, there was some limitations regarding to S language, for example, the S language was commercial packages. It cost some fortunes for the users.Thereafter, in 1993 University of Auckland through it Department of Statistics made an astonishing announcement of R and made it to public. The two statisticians were in charge for this, Ross Ihaka and Robert Gentle Gentleman. The paper can be retried from the *Journal of Computational and Graphics*. This is the link for the paper<https://www.jstor.org/stable/1390807>
+afterward, the R became the free software through the General Public License (GNU). To say, R is the free programming software. Overall, in 2000 the first R version was launched (1.0.0)
+
+```{r }
+paste("Hello","World")
+```
+
+
