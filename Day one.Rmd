@@ -1,0 +1,33 @@
+---
+title: "Getting R, R studio, Git and the GitHub"
+author: "Maulid Hussein Bwabo"
+date: "`r Sys.Date()`"
+output:
+  word_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Getting R, R studio, Git and the GitHub
+## Introduction
+In this section we will map out the four important platforms, R, R studio, Git and the GitHub. Altogether, The four powerful tools are so-called the data science tool boxes.The R studio IDE can squeeze all four in a single unified environment. It is worth to take a look from one tool into the other before discussing the R nuts and bolts. Precisely, the R basics. 
+
+## The Installation of R
+The first thing to start with R is to install it in your machine. R works very well to the numerous platforms including the widely available Windows, Mac OS X, and Linux systems. I recommend to visit the R this link for further clarification <https://cran.r-project.org/> In this link you get the access for downloading for the windows, Mac OS, as well the Linux system. Before the installation of the R, better to check the CRAN Mirrors close to your location. We are in Tanzania at the moment. The South Africa is the closest mirror so as we can access the R packages. Therefore, the comprehensive archival network for have listed all available mirrors depend on the quest of the analysts. from the above link you can access the latest release of the R programming software. 
+
+## The Installation of the R studio
+After installing R and choose the appropriate CRAN mirror, it's the moment to download and install the R Studio. R studio is the most popular environment for R. Of course, in R Studio, there is something so-called the Integrated Development Environment [IDE]. This is the tool set which is very robust for either R or Python. It includes all the enabling environment that are interested to the data analysts. The link in which can be used to download R studio for window, Mac and Linux <https://posit.co/download/rstudio-desktop/>. Leveraging to this you can access the remarkable step on how to install the R studio to your PC. 
+Notes: It is recommended to verify the specs of laptop prior to the installation of either R or R studio.
+
+## The installation of the Git
+Git is the free open sources software distribution of the version control system that designed to handle all projects between the local repository and remote repository. In this case, the analyst might used GitHub or Bitbucket. We will discuss about the GitHub as well as the Bitbucket.Git has the speed and efficiency to handle the multiple project. For example, let assume there is five people who work on a single project in different time. Git as the version control system enhance to make changes on single project to fiver analysts respectively. This link help the analysts to download the free available Git for window <https://git-scm.com/>. And the book regarding the important of Git to the data analysts also available.  The book has been written by Scott Chacon and Ben Straub title "Pro Git." The book also available online for free< https://git-scm.com/book/en/v2>. The book exhausted enough about the basics of Git, and illustrated why the analyst should take a caution on the important of working in a team.
+
+## The GitHub
+what is GitHub? is the single host for all of the Git repositories, where large number of developers could make collaboration for their ongoing project. Git as the version control system has been embedded in R studio IDE.In this sense, there is direct connection between Git and the GitHub. Indeed, Git repositories are hosted in GitHub. The open sources project use GitHub as the remote repository for hosting, to track changes in the project, code's review and the list can be expanded. Thus, the interaction between the Git and the GitHub helps to solve the black box of reproducibility.The journal editors sometimes ask about the data and the code to verify the project authenticity. Having opened the GitHub account and commit changes, finally, completed various project, it is the better way to validate the project. Let assume there is team of three people competes in Kaggle for certain prize to solve the real world problem. GitHub is the special place to push changes for an ongoing project to each collaborator. The book authored by Scott and Ben provides the state of the art procedure how to open the GitHub account. 
+
+## Conclusion 
+Having installed the R, R studio, Git and the GitHub account, we need to make a tour on how the four powerful platforms can work together using the IDE in the R Studio and delve deep into the R studio Environment.   
+
