@@ -1,0 +1,90 @@
+---
+title: "Introduction to Data Management using data.table"
+author: "Maulid Hussein Bwabo"
+date: "`r Sys.Date()`"
+output: 
+    word_document: default
+    html_document: default
+    pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# Introduction to data.table
+The data.table package is the heart for this lucrative discussion on munging and manipulation of data. This section cover the accessing of the data, editing and and manipulating of the data. Before delving deep to data visualization and exploratory analysis, it worth to discuss the data management core function and what the impact has on visualization and exploratory data analysis. 
+To understand how data management influences data manipulation, we use the data.table R package (Dowle, Srinivasan, Short, and Lianoglou, 2015).Therefore, the following code loads the checkpoint ( Microsoft Corporation, 2016 ) package to control the exact version of R
+packages used and then loads the data.table package: 
+```{r}
+library(data.table)
+options(width = 70)
+```
+## Data.table
+Among the benefits of using the data.table is the capabilities toward the memory efficient compared to built in data frame.And specifically, copy of the data, modifying it and stores of the data. In this section, we deeply discusses the fundamentals of data.table. At this moment we introduce Edgar Anderson’s iris data. The data sets involves sepal and petal lengths and widths in centimeters of
+three species of iris flowers.
+But, before the conversion of the iris data into a data table, we need to massage little bit the iris data sets. That said,  we are going to convert our species’ names to a character rather factor class. 
+```{r}
+options(stringsAsFactors = FALSE,
+ datatable.print.nrows = 20, ## if over 20 rows
+ datatable.print.topn = 3, ## print first and last 3
+ digits = 2) ## reduce digits printed by R
+ iris$Species <- as.character(iris$Species)
+ diris <- as.data.table(iris)
+ diris
+```
+The data table revealed above comprised 150 rows with three species setosa , versicolor , and virginica. lets explore the table function.
+```{r}
+tables()
+```
+The above output shows the total rows and column of the data sets, not only the rows and column but also the MB used to specific data sets into the local machine. If the analyst interested to understand more information from the data sets, He/she might recall the sappy() functions. 
+```{r}
+sapply(diris, class)
+```
+The data table is powerful tool, the analysts can even put a key to the data sets.
+Note: In data.table, a key is an index that may or may not be unique, created from one or more columns in the data sets. To check if the data set has the key we are going to used the Haskey() function.
+```{r}
+haskey(diris)
+```
+Now let set the key to the data sets
+```{r}
+setkey(diris,Species)
+```
+
+```{r}
+key(diris)
+```
+```{r}
+haskey(diris)
+```
+```{r}
+diris <- diris[order(Sepal.Length)]
+diris
+```
+
+```{r}
+haskey(diris)
+```
+
+
+
+
+```{r, automaticKnitting, echo = FALSE, eval = !isTRUE(getOption('knitr.in.progress'))}
+
+#loading stringr for string editing of file names and paths
+if (!require("stringr")){ 
+  install.packages("stringr")
+  require("stringr")}
+
+#dynaically getting the file name during runtime, in case the .rmd file was saved with a different name
+RMD_fileName <- str_replace(rstudioapi::getActiveDocumentContext()$path, paste0(sub("\\/[^\\/]*$", "",rstudioapi::getActiveDocumentContext()$path),"/"),"")
+
+#fileName is the file name of data that was loaded (somewhere else in the script) - will be appended for output
+fileName <- "Day three.Rmd" 
+
+#using fileName and appending it by _OVERVIEW
+outputFileName <- paste0(str_replace(fileName,"Day three.Rmd",""), "Day three")
+
+if(RMD_fileName!=""){
+  rmarkdown::render(input = RMD_fileName, output_file = outputFileName)
+}
+```
