@@ -1,0 +1,288 @@
+---
+title: "Getting Started"
+author: "Maulid Hussein Bwabo"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Getting started 
+# Introduction
+In this section we will map out the four important platforms, R, R studio, Git and the GitHub. Altogether, The four powerful tools are so-called the data science tool boxes.The R studio IDE can squeeze all four in a single unified environment. It is worth to take a look from one tool into the other before discussing the R nuts and bolts. Precisely, the R basics. 
+
+## The Installation of R
+The first thing to start with R is to install it in your machine. R works very well to the numerous platforms including the widely available Windows, Mac OS X, and Linux systems. I recommend to visit the R this link for further clarification <https://cran.r-project.org/> In this link you get the access for downloading for the windows, Mac OS, as well the Linux system. Before the installation of the R, better to check the CRAN Mirrors close to your location. We are in Tanzania at the moment. The South Africa is the closest mirror so as we can access the R packages. Therefore, the comprehensive archival network for have listed all available mirrors depend on the quest of the analysts. from the above link you can access the latest release of the R programming software. 
+
+## The Installation of the R studio
+After installing R and choose the appropriate CRAN mirror, it's the moment to download and install the R Studio. R studio is the most popular environment for R. Of course, in R Studio, there is something so-called the Integrated Development Environment [IDE]. This is the tool set which is very robust for either R or Python. It includes all the enabling environment that are interested to the data analysts. The link in which can be used to download R studio for window, Mac and Linux <https://posit.co/download/rstudio-desktop/>. Leveraging to this you can access the remarkable step on how to install the R studio to your PC. 
+Notes: It is recommended to verify the specs of laptop prior to the installation of either R or R studio.
+## What is R 
+The best way to explain the meaning of R is through S language. 
+1.2 The backdrop of the S language 
+The S language has been developed by the John Chambers, and it was initiated at the beginning of 1976 as the statistical environment for the statisticians. By then the programming did not have even the statistical modelling function.
+
+In 1988 the S language was re-loaded into C, this was a version 3 about the language. Thereafter, John Chambers and Hasties sunset the book of Statistical Analysis.
+
+At the early of 1990's the trajectory of the S language went down instead of growing up.A a results Insightful Corp have decided to purchase it. It was happened in 2004, the insightful sold it under the product name called the S-Plus and consolidate some of the fancy features such as the Graphical User Interface (GUI). It turned out in this way due to fast changes in technology.
+#### The S Philosophy
+
+The entire S language was important because it propel to invent the R program, the set out of the R programming was built from the S language. Following this, it is fair to argue that the roots for data analysis had emerged from the S language. To be more precisely, the S language has the traditional programming language. 
+
+During the Evolution of the S language, Chambers argue
+("We wanted users to be able to begin in an interactive environment, where they did not consciously think of themselves as programming. Then as their needs became clearer and their sophistication increased, they should be able to slide gradually into programming, when the language and system aspects would become more important").
+
+What was a key message from Chambers? The rationale was to establish the language that was easy for users as well as technically designed parallel with technology.
+
+# where is R come from?
+
+Immediately after S language starts to take shape R language came into the map. By then, there was some limitations regarding to S language, for example, the S language was commercial packages. It cost some fortunes for the users.Thereafter, in 1993 University of Auckland through it Department of Statistics made an astonishing announcement of R and made it to public. The two statisticians were in charge for this, Ross Ihaka and Robert Gentle Gentleman. The paper can be retried from the *Journal of Computational and Graphics*. This is the link for the paper<https://www.jstor.org/stable/1390807>
+afterward, the R became the free software through the General Public License (GNU). To say, R is the free programming software. Overall, in 2000 the first R version was launched (1.0.0)
+At the moment is an ideal time to start the first R Code, which is normal the 'Hello Wolrd'. 
+```{r }
+paste("Hello","World")
+```
+## Why use R for data analytic?
+1. R is the open sources software, it is easy to get supports from the R community. 
+2. R is the future regarding to machine learning and artificial intelligence. 
+3. R is the suitable programming language for the academician, and precisely about reproduciability and the knowledge diffusion among the scientists. 
+4. R is a general-purpose programming language, so you can use it to automate analyses and create new functions that extend the existing language features.
+5. R programming language enhance the data scientist to write his/her own scripts, there are different methods of solving single problem, it is not the plug and play. 
+
+To this end, because R is a programming language rather than a collection of discrete commands, you can combine several commands, each using the output of the previous one.
+```{r}
+nrow(subset(x03,z == 1))
+```
+what is the meaning of the above chunk of code?
+First, the subset() function takes the data frame x03 and extracts all records for which the variable z has the value 1.
+
+The above code show the ability of the R programming to combine different functions. It help R to stand out with huge flexibility as well as quite powerful in comparable to other language. 
+## Whom is this course for?
+I designed this short course for students who wish to starts the professional journey to be a data scientist and eventually become either machine learning engineer "I took a programming course offered by John Hopkins University; Data Science Specialization Using R, the rationale behind was understand the to what extent data has the power to the modern era of science". I have been interacting with the R programming language through Publications in My PhD journey, do not loose touch with R wherever you face the hurdle, R is the future. 
+
+## How to run R 
+R programming operate in a two mode: the interactive  and the batch mode. About the Interactive model, you type the command R display the results. On other hand, the batch mode do not engage the user directly at the same time.Some example of the interactive mode 
+```{r}
+R.Version()
+```
+creating the random variables
+```{r}
+mean(abs(rnorm(100)))
+```
+The above code generates the 100 random variates, finds their absolute values,and then finds the mean of the absolute values.
+```{r}
+rnorm(10)
+```
+### Batch Mode
+For example, you may
+wish to run an R script that generates a graph without needing to bother with manually launching R and executing the script yourself. Here you would run R in batch mode.
+```{r}
+hist(rnorm(100))
+```
+second example 
+```{r}
+pdf("xhf.pdf")
+```
+We call the pdf() function to inform R that we want the graph we create to be saved in the PDF file xh.pdf
+## A first R session 
+
+# Preview of R data Structures
+## Introduction
+R encompass various data structures, at this point, we will discuss the frequent used structures in R that is more influential for data analytics. Here, we will illustrate some of the meaningful examples regarding to the data structures. This overview of the data structures give highlight of syntax and semantics of how R works. Indeed, the preview of data structure dive deep in telling the story about Vector, List, strings, and matrices.The chunks of code to whole presentation will be carried out through the Window environment. 
+## R Object
+R comprised of the five atomic object to run smoothly. The character, numeric(real number), integer, complex and logical(TRUE/FALSE). The most used object in the R programming is vectors. The R object has its own set with regard to attributes, these are alternatively branded as a metadata to the object. Of course, the metadata explain the object in R. Detailing out examples of the attributes in R important before describing the data structures in R. That said, the R attributes contain dimensions (matrices or arrays), class(integer or numeric), length, and dimensions names. 
+
+### Vectors
+The heart of R programming is vectors, to make a deeply interaction with the R session, the vectors are the workhorse in the R environment. In fact, the vector normally works very well in R session if analysts managed to program in a same mode. (c) is the function used to create vectors objects and concatenating all the staffs in one pack.  
+```{r}
+x<-8
+x
+```
+The above example demonstrated different types of vector underscored by attributes.For example, [1] show the row number begin with 1, R treat X as vector, vector with one element. 
+### Character strings 
+R has the capability to manipulate the character strings, in fact, character strings are the are single elements vector in a character mode. 
+```{r example}
+x<-c(1,2,3,4)
+x
+length(x)
+mode(x)
+```
+
+```{r}
+y<-"abc"
+length(y)
+mode(y)
+```
+Regarding the two example above R has the function to manipulate the strings, in the first example we created the vector as the numeric while the second we exercised one string vector.
+```{r}
+u<-paste("abc","de", "f")#concatenating the strings
+u
+```
+
+```{r}
+v <- strsplit(u," ") # split the string according to blanks
+v
+```
+### Matrices
+R matrix correspond to the maths that has the same name, these are the rectangular arrays number. In a technical term, matrix is the vector. 
+```{r}
+m <- rbind(c(1,4),c(2,2))
+m
+```
+
+```{r}
+m1 <- matrix(1:6, nrow = 2, ncol = 3)
+m1
+```
+From the above two example, we created two separate vector, we created matrix using the rbind function and the latter, the matrix function. The rbind stand for row bind function that used to build the matrix from the two separate vectors. At the same time, the cbind stand for combine several column to develop the matrix. The second example we created the m1 as matrix and pass it to the matrix functions by naming the number of rows as well as the column.
+### List
+List is similar to vectors in R programming, but its contents poses different data types. To be more precise, the lists posit different classes, in that sense, the so-called "apply" functions are embedded in a list. 
+```{r}
+x1<-list(1, "ab", TRUE,1+4i)
+x1
+```
+Next, we created a list with the vector.
+```{r}
+x2<-vector("list", length = 8)
+x2
+```
+practicing the data structure using the Nile DATASETS
+## Home Work
+Individual assignment using the swirl package
+1. Reference <https://r4ds.had.co.nz/model-intro.html> 
+2. Reference <https://r4ds.hadley.nz/>
+The above books are available for free, you do not have pay a single penny.   
+## A first R Session
+In this section we are going to make a little practice to understand how R works prior to details the mechanics for data inputs and outputs.
+
+````{r}
+x<-c(1,2,3,4,5)
+x
+```
+x has been created as normal vector, <- is normal standard operator assignment R, alternatively, = is the substitute for the above standard operator. Moreover, C stands for concatenate, we are concatenating the numbers 1, 2,3, 4, and 5. 
+
+```{r}
+q=c(x,x,8)
+q
+```
+### subsetting
+```{r}
+x[2:3]
+```
+The expression x[2:3] refers to the sub-vector of x consisting of elements 2 through 3.We can find the mean and standard deviation of the above data sets
+```{r}
+mean(x)
+sd(x)
+```
+Creating new variable with the mean of x 
+```{r}
+y<-mean(x)
+y
+```
+Comments are especially valuable for documenting program code, but
+they are useful in interactive sessions, too, since R records the command history.
+### Exploring the built in data sets in R 
+```{r}
+data()
+```
+
+```{r}
+mean(Nile)
+sd(Nile)
+summary(Nile)
+head(Nile)
+tail(Nile)
+Nile[2:5]
+dim(Nile)
+```
+
+```{r}
+data("AirPassengers")
+str(AirPassengers)
+head(AirPassengers)
+AirPassengers[33:45]
+```
+# Input/Ouput 
+##Introduction
+R is not the tool you would choose for running an ATM, but it features a highly versatile array of I/O capabilities, as you will learn in this section.
+
+
+```{r}
+hist(Nile)
+```
+We used the ready made data set that available in R to exercised how the above data structures in R works.The data set called the Nile River Data sets.  
+```{r}
+hn=hist(Nile)
+print(hn)
+```
+
+```{r}
+str(hn)
+head(hn)
+class(hn)
+```
+### Data Frames 
+The normal data set usually have numerous set of data with various format. The data frames in R is called the list. It is due to the fact that the data frames. Let massage a data frames in R
+```{r}
+d <- data.frame(list(kids=c("Jack","Jill"),ages=c(12,10)))
+d
+```
+### Classes 
+R programming language is the Object Oriented Program(OOP), in R, Object are referred to the classes. During the day of the course we introduce the historical background of R,R stem from the old S language.Most of R is based on these classes, and they are easy to use.
+````{r}
+print(hn)
+```
+Looking again in this example the attribute described as the class.
+
+# System and Files
+In a window environment R is very effective for file manipulation,of course, this start from creating data files and checking dates. R has handy function to make some maneuver between the data file and checking the dates. We are going to look at the current date, time and time zones
+```{r}
+Sys.Date()
+Sys.time()
+Sys.timezone()
+```
+Time is very helpful if the data analyst are work remotely, each one contributes to the project that has been going one for a while and changes submitted to the remote repository, before uploading the changes using Git, its is recommended to check the time to other location. 
+```{r}
+getwd()
+file.exists("C:/Users/bwabo/OneDrive/Desktop/Data Science/Regression Models/Introduction-to-R-programming-for-data-analytics")
+
+```
+# Data Input and Output
+Getting the data sets into the R is the next challenges, The analysts need to be more precisely about this, any mistakes might get the whole project to unnecessary problem. text tab and comma separate value are the most common files used in R.Next, common data file types include Microsoft Excel, SPSS, SAS, and Stata. The R packages are most robust to handle different data file format. 
+
+## Native data sets
+For the analysts started the data science as a unique specialization must choose the appropriate machine to be used, and understand the pro and cons between the window and OS. To weight out the advantages and disadvantage for each is important. As the example shown above, OS use the forward lash while the window is backlash. I personally, I have been used the window, so the entire presentation will be carried out through window only. 
+## Fixed formats data set
+From the above chunk of code, we imports the data set into R using the read.table function. What is read.table? It can take numerous basic file type and read them as the data frame. 
+## Input
+example of how R read data sets from other format
+```{r}
+install.packages("foreign")
+library(foreign)
+```
+The above packages is crucial to analyst because file from different files format can be integrated in R environment. 
+### References
+1. Introduction to data input output <https://www.stat.auckland.ac.nz/~paul/>
+```{r, automaticKnitting, echo = FALSE, eval = !isTRUE(getOption('knitr.in.progress'))}
+
+#loading stringr for string editing of file names and paths
+if (!require("stringr")){ 
+  install.packages("stringr")
+  require("stringr")}
+
+#dynaically getting the file name during runtime, in case the .rmd file was saved with a different name
+RMD_fileName <- str_replace(rstudioapi::getActiveDocumentContext()$path, paste0(sub("\\/[^\\/]*$", "",rstudioapi::getActiveDocumentContext()$path),"/"),"")
+
+#fileName is the file name of data that was loaded (somewhere else in the script) - will be appended for output
+fileName <- "Course 1.Rmd" 
+
+#using fileName and appending it by _OVERVIEW
+outputFileName <- paste0(str_replace(fileName,"Course 1.Rmd",""), "Course 1")
+
+if(RMD_fileName!=""){
+  rmarkdown::render(input = RMD_fileName, output_file = outputFileName)
+}
+```
+
